@@ -1,0 +1,15 @@
+{
+  "name": "nodefirebase",
+  "version": "1.0.0",
+  "description": "It is just a test web app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sahil Rajpal",
+  "license": "ISC",
+  "dependencies": {
+    "http-server": "^0.12.3",
+    "httpserver": "^0.3.0"
+  }
+}
