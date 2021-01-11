@@ -69,30 +69,30 @@ if (areaName === '') {
         var socities = snap.val()
         console.log(socities)
         var societyHtml = `<thead>
-      <tr>
-        <th>Society Name</th>
-        <th>Total Employees</th>
-        <th>Total Cars</th>
-      </tr>
-    </thead>
-    <tfoot>
-      <tr>
-        <th>Society Name</th>
-        <th>Total Employees</th>
-        <th>Total Cars</th>
-      </tr>
-    </tfoot>
-    <tbody>`
+  <tr>
+    <th>Society Name</th>
+    <th>Total Employees</th>
+    <th>Total Cars</th>
+  </tr>
+</thead>
+<tfoot>
+  <tr>
+    <th>Society Name</th>
+    <th>Total Employees</th>
+    <th>Total Cars</th>
+  </tr>
+</tfoot>
+<tbody>`
         var i = 0
         for (let cluster in socities) {
             societyHtml +=
-                `<tr> <td> <a href='EmployeeTables.html?name=${encodeURIComponent(
-          areaName + '~' + Object.keys(socities)[i]
-        )}' >` +
+                `<tr> <td> <a href='setCars.html?name=${encodeURIComponent(
+      areaName + '~' + Object.keys(socities)[i]
+    )}' >` +
                 Object.keys(socities)[i] +
                 `</a> </td> <td> ${
-          Object.keys(socities[cluster]).length
-        } </td> </td> <td> N/A </td>  </tr>`
+      Object.keys(socities[cluster]).length
+    } </td> </td> <td> N/A </td>  </tr>`
             i++
         }
         societyHtml += '</tbody>'
@@ -122,18 +122,18 @@ async function getEmployees(Society) {
     var employeeIdNum = 0
     var employeeHtml = ``
     employeeHtml += `<thead>
-  <tr>
-    <th>Society Name</th>
-    <th>Total Employees</th>
-    <th>Total Cars</th>
-  </tr>
+<tr>
+<th>Society Name</th>
+<th>Total Employees</th>
+<th>Total Cars</th>
+</tr>
 </thead>
 <tfoot>
-  <tr>
-    <th>Society Name</th>
-    <th>Total Employees</th>
-    <th>Total Cars</th>
-  </tr>
+<tr>
+<th>Society Name</th>
+<th>Total Employees</th>
+<th>Total Cars</th>
+</tr>
 </tfoot>
 <tbody>`
     await refe.once('value', (snap) => {
@@ -149,7 +149,7 @@ async function getEmployees(Society) {
                 var Employeref = snap.val()
                 console.log(Employeref)
                 employeeHtml += `<tr>`
-                employeeHtml += `<th scope="col"> ${Employe.Name} <br />(<a href='EmployeeTables.html' >${employeeId}</a>)</th>`
+                employeeHtml += `<th scope="col"> ${Employe.Name} <br />(<a href='setCars.html' >${employeeId}</a>)</th>`
                 var todaysCars = Employeref.todaysCars.toString()
                 var array = todaysCars.split(',')
                 var html = ''
